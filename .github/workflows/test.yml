@@ -1,0 +1,10 @@
+on: [push, pull_request]
+
+name: Build serv2
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04-xl
+    name: test
+    steps:
+      - run: echo Hi
